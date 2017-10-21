@@ -5,13 +5,7 @@ body
 	.wrapper
 		.main-content
 			<!-- / ========= header ========= \ -->
-			.content
-				.container
-					<!-- / ========= sidebar ========= \ -->
-					include ../common/navigation
-					<!-- / ========= page-content Изменяемый контент ========= \ -->
-					.page-content
-						<!-- / ========= Изменяемая часть каждой страницы ========= \ -->
-						block content
+			include  ../common/header.jade
+			block content
 	<!-- / ========= footer ========= \ -->
 	include ../common/footer.jade

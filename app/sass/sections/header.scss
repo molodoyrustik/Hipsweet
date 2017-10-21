@@ -1,0 +1,265 @@
+.header {
+  min-height: 760px;
+  background: url('../images/bg-1.jpg') center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 21px;
+  @include arial()
+}
+.header__left {
+  float: left;
+  margin-bottom: 100px;
+}
+.header__logo-wrap {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.header__logo {
+  display: block;
+}
+
+.header__right {
+  float: right;
+  margin-bottom: 100px;
+}
+
+.navigation {
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.navigation__item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-left: 40px;
+  padding-right: 15px;
+  font-size: 16px;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.navigation__link {
+  font-size: 16px;
+  color: #fff;
+  line-height: 22px;
+  @include arial();
+  text-decoration: none;
+}
+
+.gallery {
+  position: relative;
+  clear: both;
+  width: 1085px;
+  margin: 0 auto;
+  background: url('../images/text-pie-bg.png') center 125px no-repeat;
+}
+
+.gallery__left {
+  float: left;
+  margin-bottom: 80px;
+}
+.gallery__left-outer {
+  float: left;
+  width: 125px;
+  margin-right: 70px;
+}
+
+.gallery__ingredients {
+  margin-bottom: 200px;
+  text-align: center;
+
+}
+
+.gallery__ingredients-spoon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  background-color: #cf444a;
+  background-image: url('../images/spoon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 1;
+
+  &:hover {
+    background-image: url('../images/spoon-hover.png');
+  }
+
+  &:hover .gallery__ingredients-block {
+    display: block;
+  }
+
+}
+
+.gallery__ingredients-block {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 130px;
+  width: 280px;
+  padding: 35px;
+  padding-right: 60px;
+  min-height: 175px;
+  background: url("../images/ingredients-bg.png");
+  border-radius: 25px;
+}
+
+.gallery__ingredients-list {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__ingredients-item {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  padding-left: 40px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #575757;
+  text-align: left;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(1) {
+    background: url('../images/rye.png') 0 center no-repeat;
+  }
+
+  &:nth-child(2) {
+    background: url('../images/eggs.png') 0 center no-repeat;
+  }
+
+  &:nth-child(3) {
+    background: url('../images/sugar.png') 0 center no-repeat;
+  }
+
+  &:nth-child(4) {
+    background: url('../images/butter.png') 0 center no-repeat;
+  }
+
+  &:nth-child(5) {
+    background: url('../images/milk.png') 0 center no-repeat;
+  }
+}
+
+.gallery__ingredients-item span {
+  float: right;
+}
+
+.gallery__data {
+  text-align: center;
+}
+
+.gallery__data-title {
+  font-size: 13px;
+  line-height: 20px;
+  color: #fff;
+  opacity: 0.3;
+}
+.gallery__ingredients-title {
+  font-size: 14px;
+  line-height: 13px;
+  @include arial(regular);
+}
+
+.gallery__data-hour {
+  font-size: 24px;
+  line-height: 20px;
+  @include malina();
+}
+
+
+.gallery__right {
+  float: right;
+  width: 405px;
+  margin-bottom: 80px;
+}
+.gallery__title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  @include malina();
+  font-size: 62px;
+  line-height: 74px;
+}
+.gallery__desc {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  @include arial();
+  font-size: 15px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.gallery__wrap-price {
+  @extend %clearfix;
+  font-size: 0;
+}
+.gallery__price {
+  @include inline-block();
+  margin: 0;
+  margin-right: 45px;
+  padding: 0;
+  @include malina();
+  font-size: 62px;
+  line-height: 45px;
+}
+.gallery__price-btn {
+  @include inline-block();
+  width: 60px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "ArialBold";
+  color: #a4151c;
+  background-color: #fca211;
+  text-decoration: none;
+  border-radius: 20px;
+
+  &:hover {
+    color: #fca211;
+    background-color: #641a00;
+  }
+}
+
+.gallery__btns-controller {
+  clear: both;
+}
+.gallery__btns {
+  width: 210px;
+  margin: 0 auto;
+  font-size: 0;
+  line-height: 10px;
+}
+.gallery__btn {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-left: 30px;
+  padding: 0;
+  font-size: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

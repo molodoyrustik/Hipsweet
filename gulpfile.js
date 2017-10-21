@@ -12,7 +12,7 @@ var gulp      = require("gulp"),
     minifyCss = require('gulp-minify-css'),
     jade      = require('gulp-jade'),
     prettify  = require('gulp-prettify'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     gutil     = require('gulp-util'),
     ftp       = require('vinyl-ftp'),
     reload    = browserSync.reload;
@@ -24,7 +24,7 @@ var sourcemaps = require('gulp-sourcemaps');
 // ===============================================================================
 // =============================   Работа в APP  =================================
 
-// Компилируем Jade в html 
+// Компилируем Jade в html
 gulp.task('jade', function() {
     gulp.src('app/templates/pages/*.jade')
     .pipe(jade())
@@ -59,17 +59,16 @@ gulp.task('wiredep', function () {
 
 
 // Запускаем локальный сервер (только после компиляции Jade)
+
 gulp.task('server', ['jade', 'sass'], function() {
-    browserSync({
-        notify: false,
-        port: 9000,
+    browserSync.init({
         server: {
-            baserDir: 'app'
+            notify: false,
+            port: 9000,
+            baseDir: "./app"
         }
-    })
+    });
 });
-
-
 
 // слежка и запусл задачи
 gulp.task('watch', function() {
@@ -91,7 +90,7 @@ gulp.task('default', ['server', 'watch']);
 // ===============================================================================
 // =============================   СБОРКА   ======================================
 
-// Очистка папки 
+// Очистка папки
 gulp.task('clean', function () {
     return gulp.src('dist')
         .pipe(clean());
@@ -112,14 +111,14 @@ gulp.task('fonts', function () {
     .pipe(gulp.dest('dist/fonts/'));
 })
 
-// Картинки 
+// Картинки
 gulp.task('images', function () {
-    return gulp.src('app/img/**/*')
+    return gulp.src('app/images/**/*')
         .pipe(imagemin({
             progressive: true,
             interlaced: true
         }))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('dist/images'));
 });
 
 // Остальные файлы такие как favicon.ico и пр.
@@ -151,8 +150,8 @@ gulp.task('build', ['clean', 'jade'], function () {
 // ===============================================================================
 // ===============================================================================
 // =============================   Функции   =====================================
- 
-// Более наглядный вывод ошибок 
+
+// Более наглядный вывод ошибок
 var log = function (error) {
     console.log([
         '',
@@ -170,7 +169,7 @@ var log = function (error) {
 // ===============================================================================
 // ==============================  Важные моменты  ===============================
 // gullp.task(name, deps, fn);
-// deeps - массив задач, которые будут выполнены ДО запуска задачи name 
+// deeps - массив задач, которые будут выполнены ДО запуска задачи name
 // внимательно следите за порядком выполнения задач!
 
 // ===============================================================================

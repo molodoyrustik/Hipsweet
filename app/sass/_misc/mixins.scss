@@ -17,4 +17,21 @@
   vertical-align: $valign;
 }
 
+@mixin malina() {
+  font-family: 'als_malinaregular';
+}
 
+@mixin arial($typeArial: regular) {
+
+  @if $typeArial == regular {
+    font-family: "ArialRegular";
+  } @else if $typeArial == bold {
+    font-family: "ArialBold";
+  } @else if $typeArial == italic {
+    font-family: "ArialItalic";
+  } @else if $typeArial == black {
+    font-family: "ArialBlack";
+  } @else if $typeArial == bold-italic {
+    font-family: "ArialBoldItalic";
+  }
+}

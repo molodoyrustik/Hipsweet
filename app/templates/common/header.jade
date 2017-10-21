@@ -1,2 +1,8 @@
 header.header
-    div.container
+    .container
+        .header__left
+            .header__logo-wrap
+                img.header__logo(src='images/Logo.png')
+        .header__right
+            include ../common/navigation
+        include ../sections/header-gallery    

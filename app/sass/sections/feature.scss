@@ -1,0 +1,72 @@
+.feature {
+  @extend %clearfix;
+  min-height: 760px;
+  background: url('../images/feature-cook.png') 80% bottom no-repeat, url('../images/feature-bg.jpg') center;
+}
+
+.feature__left {
+  float: left;
+  margin-left: 75px;
+  margin-top: 115px;
+}
+
+.feature__desc {
+  width: 400px;
+  margin-bottom: 75px;
+}
+
+.feature__title {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  @include malina();
+  font-size: 62px;
+  color: #2b2f5f;
+}
+
+.feature__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 22.25px;
+  color: #747474;
+}
+
+.feature-items {
+
+}
+
+.feature__list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.feature__item {
+  width: 140px;
+  display: inline-block;
+  margin: 0;
+  margin-left: 65px;
+  padding: 0;
+  padding-top: 125px;
+  font-size: 16px;
+  @include malina();
+  line-height: auto;
+  color: #747474;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:nth-child(1) {
+    background: url("../images/hat.png") center top no-repeat;
+  }
+
+  &:nth-child(2) {
+    background: url("../images/leaves.png") 0 top no-repeat;
+  }
+
+  &:nth-child(3) {
+    background: url("../images/heart.png") 0 top no-repeat;
+  }
+}

@@ -1,0 +1,91 @@
+.our-offers {
+  padding-top: 110px;
+  @extend %clearfix;
+  min-height: 1020px;
+  background: url('../images/our-offers-bg.jpg') center;
+}
+
+.our-offers__title-group {
+  width: 795px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.our-offers__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  @include malina();
+  font-size: 62px;
+  line-height: 40px;
+  color: #2b2f5f;
+}
+
+.our-offers__text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 22.25px;
+  color: #883213;
+}
+
+.our-offers__list {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.our-offers__item {
+  display: inline-block;
+  width: 225px;
+  margin: 0;
+  margin-left: 60px;
+  padding: 0;
+  padding-top: 265px;
+  text-align: center;
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  &:nth-child(1) {
+    background: url('../images/cake1.png') center top no-repeat;
+  }
+  &:nth-child(2) {
+    background: url('../images/biscuit.png') center 60px  no-repeat;
+  }
+  &:nth-child(3) {
+    background: url('../images/donut.png') center 60px no-repeat;
+  }
+  &:nth-child(4) {
+    background: url('../images/roll.png') center 60px no-repeat;
+  }
+  &:nth-child(5) {
+    background: url('../images/marshmallows.png') center 60px no-repeat;
+  }
+  &:nth-child(6) {
+    background: url('../images/chocolate.png') center 60px no-repeat;
+  }
+  &:nth-child(7) {
+    background: url('../images/pie.png') center 60px no-repeat;
+  }
+  &:nth-child(8) {
+    background: url('../images/candies.png') center 60px no-repeat;
+  }
+}
+
+.our-offers__item-title {
+  margin: 0;
+  padding: 0;
+  @include malina();
+  font-size: 22px;
+  color: #393939;
+}
+
+.our-offers__item-text {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  color: #ab594a;
+}
